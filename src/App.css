@@ -3,6 +3,8 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background: black;
+  color: white;
 }
 
 .logo {
@@ -16,6 +18,13 @@
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.student {
+  border: 2px solid tomato;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
 }
 
 @keyframes logo-spin {
