@@ -16,7 +16,9 @@ function App() {
       <Student name="Rafiq" age="60" />
       <Developer language={"Javascript"} />
 
-      <Todo />
+      <Todo task="Learn React" isDone={false} />
+      <Todo task="Core Concepts" isDone={false} />
+      <Todo task="Try JSX" isDone={true} />
     </>
   );
 }
