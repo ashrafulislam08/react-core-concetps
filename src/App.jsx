@@ -1,10 +1,29 @@
 import "./App.css";
 import Todo from "./Todo";
+import Actor from "./Actor";
+import Singer from "./Singer";
 
 function App() {
+  const actors = ["Sakib", "Raj", "Jasim", "Rubel"];
+
+  const singers = [
+    { id: 1, name: "Dr. Mahfuzur Rahman", age: 68 },
+    { id: 2, name: "Eva Rahman", age: 38 },
+    { id: 3, name: "Shuvro Dev", age: 58 },
+    { id: 4, name: "Pritom", age: 28 },
+    { id: 5, name: "Imran", age: 37 },
+  ];
+
   return (
     <>
-      <Device name="Laptop" price="5000" />
+      {singers.map((singer) => (
+        <Singer singer={singer} />
+      ))}
+      <Actor name="Bappa Raaz" />
+      {actors.map((actor) => (
+        <Actor name={actor} />
+      ))}
+      {/* <Device name="Laptop" price="5000" />
       <Device name="Phone" price="1170" />
       <Device name="Mobile" price="2000" />
       <Person />
@@ -18,7 +37,7 @@ function App() {
 
       <Todo task="Learn React" isDone={false} />
       <Todo task="Core Concepts" isDone={false} />
-      <Todo task="Try JSX" isDone={true} />
+      <Todo task="Try JSX" isDone={true} /> */}
     </>
   );
 }
