@@ -28,12 +28,29 @@
 //     </li>
 //   );
 // }
+// function Todo({ task, isDone }) {
+//   return (
+//     <li>{task} {isDone || ": Do it"} </li>
+//   );
+// }
+
 function Todo({ task, isDone }) {
-  return (
-    <li>
-      {task} {isDone || ": Do it"}
-    </li>
-  );
+  let listItems;
+  if (isDone) {
+    listItems = (
+      <li>
+        {task} {isDone && ": Done"}{" "}
+      </li>
+    );
+  } else {
+    listItems = (
+      <li>
+        {task} {isDone || ": Do it"}{" "}
+      </li>
+    );
+  }
+
+  return listItems;
 }
 
 export default Todo;
