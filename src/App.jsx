@@ -1,24 +1,33 @@
 import "./App.css";
+import Todo from "./Todo";
 
 function App() {
   return (
     <>
-      <Device name="Laptop" />
-      <Device name="Phone" />
-      <Device name="Mobile" />
+      <Device name="Laptop" price="5000" />
+      <Device name="Phone" price="1170" />
+      <Device name="Mobile" price="2000" />
       <Person />
       <Person />
       <Person />
       <Person />
       <Person />
-      <Student />
-      <Developer />
+      <Student name="Siam" age="25" />
+      <Student name="Rafiq" age="60" />
+      <Developer language={"Javascript"} />
+
+      <Todo />
     </>
   );
 }
 
-function Device(props) {
-  return <h2>This device: {props.name} </h2>;
+function Device({ name, price }) {
+  return (
+    <h2>
+      This device: {name} <br />
+      Price: {price}
+    </h2>
+  );
 }
 
 function Person() {
@@ -32,17 +41,17 @@ function Person() {
   );
 }
 
-function Student() {
+function Student({ name, age }) {
   return (
     <div className="student">
       <h3>This is a student</h3>
-      <p>Name: </p>
-      <p>Age: </p>
+      <p>Name:{name} </p>
+      <p>Age: {age} </p>
     </div>
   );
 }
 
-function Developer() {
+function Developer({ language }) {
   const developerStyle = {
     margin: "20px",
     padding: "20px",
@@ -52,11 +61,11 @@ function Developer() {
   return (
     <div style={developerStyle}>
       <h5>Developer</h5>
-      <p>Coding: </p>
+      <p>Coding: {language} </p>
     </div>
   );
 }
 
 export default App;
 
-// Javascript XML
+// Javascript XML - JSX
